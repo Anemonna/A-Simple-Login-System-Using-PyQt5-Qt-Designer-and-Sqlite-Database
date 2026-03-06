@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="pattern">
+    <file>image/delete.png</file>
+    <file>image/exit.png</file>
+    <file>image/icon.png</file>
+    <file>image/minimize.png</file>
+  </qresource>
+</RCC>

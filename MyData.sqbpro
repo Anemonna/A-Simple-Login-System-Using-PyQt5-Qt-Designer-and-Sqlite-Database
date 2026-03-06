@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="MyData.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1224"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="0" parent="0"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="Students" custom_title="0" dock_id="1" table="4,8:mainStudents"/><dock_state state="000000ff00000000fd0000000100000002000002dc00000217fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000000002dc0000012400ffffff0000026f0000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Students" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="34"/><column index="2" value="55"/><column index="3" value="29"/><column index="4" value="50"/><column index="5" value="79"/><column index="6" value="151"/><column index="7" value="79"/><column index="8" value="71"/><column index="9" value="87"/><column index="10" value="95"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">-- Step 1: Clear all data and reset the auto-increment counter
+DELETE FROM Students;
+DELETE FROM sqlite_sequence WHERE name='Students';
+
+-- Step 2: Insert 30 records with the specified format
+INSERT INTO Students (id, name, age, gender, city, phone, email, education, birthday) VALUES 
+(1, 'Alice', 19, 'F', 'Beijing', '13800138001', 'alice@edu.cn', 'Bachelor', '2007-05-12'),
+(2, 'Bob', 20, 'M', 'Shanghai', '13800138002', 'bob@edu.cn', 'Bachelor', '2006-08-21'),
+(3, 'Charlie', 21, 'M', 'Guangzhou', '13800138003', 'charlie@edu.cn', 'Master', '2005-03-15'),
+(4, 'Daisy', 19, 'F', 'Shenzhen', '13800138004', 'daisy@edu.cn', 'Associate', '2007-11-30'),
+(5, 'Eric', 22, 'M', 'Hangzhou', '13800138005', 'eric@edu.cn', 'PhD', '2004-01-10'),
+(6, 'Fiona', 20, 'F', 'Suzhou', '13800138006', 'fiona@edu.cn', 'Bachelor', '2006-12-05'),
+(7, 'George', 21, 'M', 'Nanjing', '13800138007', 'george@edu.cn', 'Bachelor', '2005-09-22'),
+(8, 'Hannah', 19, 'F', 'Wuhan', '13800138008', 'hannah@edu.cn', 'Associate', '2007-06-18'),
+(9, 'Ivan', 22, 'M', 'Xian', '13800138009', 'ivan@edu.cn', 'Master', '2004-04-25'),
+(10, 'Judy', 20, 'F', 'Chengdu', '13800138010', 'judy@edu.cn', 'Bachelor', '2006-10-14'),
+(11, 'Kevin', 21, 'M', 'Chongqing', '13800138011', 'kevin@edu.cn', 'Bachelor', '2005-07-08'),
+(12, 'Lily', 19, 'F', 'Tianjin', '13800138012', 'lily@edu.cn', 'Associate', '2007-02-28'),
+(13, 'Mike', 22, 'M', 'Shenyang', '13800138013', 'mike@edu.cn', 'Master', '2004-11-12'),
+(14, 'Nancy', 20, 'F', 'Qingdao', '13800138014', 'nancy@edu.cn', 'Bachelor', '2006-03-09'),
+(15, 'Oscar', 21, 'M', 'Dalian', '13800138015', 'oscar@edu.cn', 'Bachelor', '2005-12-30'),
+(16, 'Peter', 19, 'M', 'Changsha', '13800138016', 'peter@edu.cn', 'Associate', '2007-05-19'),
+(17, 'Queen', 22, 'F', 'Wuxi', '13800138017', 'queen@edu.cn', 'PhD', '2004-08-04'),
+(18, 'Rex', 20, 'M', 'Nanchang', '13800138018', 'rex@edu.cn', 'Bachelor', '2006-01-27'),
+(19, 'Sarah', 21, 'F', 'Ningbo', '13800138019', 'sarah@edu.cn', 'Master', '2005-04-16'),
+(20, 'Tom', 19, 'M', 'Xiamen', '13800138020', 'tom@edu.cn', 'Bachelor', '2007-10-22'),
+(21, 'Una', 22, 'F', 'Hefei', '13800138021', 'una@edu.cn', 'Associate', '2004-02-13'),
+(22, 'Vince', 20, 'M', 'Anshan', '13800138022', 'vince@edu.cn', 'Bachelor', '2006-07-01'),
+(23, 'Wendy', 21, 'F', 'Yining', '13800138023', 'wendy@edu.cn', 'Bachelor', '2005-05-20'),
+(24, 'Xavier', 19, 'M', 'Wenzhou', '13800138024', 'xavier@edu.cn', 'Master', '2007-09-05'),
+(25, 'Yolanda', 22, 'F', 'Jinan', '13800138025', 'yolanda@edu.cn', 'Bachelor', '2004-12-18'),
+(26, 'Zack', 20, 'M', 'Fuzhou', '13800138026', 'zack@edu.cn', 'Associate', '2006-04-30'),
+(27, 'Amy', 21, 'F', 'Kunming', '13800138027', 'amy@edu.cn', 'Master', '2005-11-11'),
+(28, 'Brian', 19, 'M', 'Zhengzhou', '13800138028', 'brian@edu.cn', 'Bachelor', '2007-03-03'),
+(29, 'Cathy', 22, 'F', 'Hengyang', '13800138029', 'cathy@edu.cn', 'Bachelor', '2004-06-21'),
+(30, 'David', 20, 'M', 'Xingtai', '13800138030', 'david@edu.cn', 'Associate', '2006-02-14');</sql><current_tab id="0"/></tab_sql></sqlb_project>
